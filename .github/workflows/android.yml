@@ -13,9 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: set up JDK 17
+    - name: apt update
       run: sudo apt update
-           sudo apt install openjdk-17-jdk
+    - name: install jdk17
+      run: sudo apt install openjdk-17-jdk
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
